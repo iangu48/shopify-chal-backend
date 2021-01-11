@@ -14,6 +14,9 @@ router.get('/', function(req, res, next) {
         })
         res.send(docs)
     })
+        .catch(r => {
+            res.send(r)
+        })
 });
 
 module.exports = router;
