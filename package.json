@@ -13,9 +13,7 @@
     "firebase": "^8.2.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
-  },
-  "devDependencies": {
+    "pug": "2.0.0-beta11",
     "@google-cloud/firestore": "^4.8.1"
   }
 }
