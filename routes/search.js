@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
     search(field, op, value).then(ss => {
         const docs = []
         ss.docs.forEach(doc => {
-            docs.push(doc.data())
+            docs.push({...doc.data(), id: doc.id})
         })
         res.send(docs)
     })

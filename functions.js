@@ -23,16 +23,17 @@ async function upload(imgUrl) {
 
 }
 
-async function getSorted() {
-
-}
-
 async function search(field, op, value) {
     const col = firestore.collection('imgs')
 
     return col.where(field, op, value).get()
 }
 
+async function del(id) {
+    const doc = firestore.doc(`imgs/${id}`)
+    return doc.delete()
+}
+
 exports.upload = upload
-exports.getSorted = getSorted
+exports.del = del
 exports.search = search

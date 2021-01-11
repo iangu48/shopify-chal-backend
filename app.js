@@ -8,6 +8,7 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var uploadRouter = require('./routes/upload');
 var searchRouter = require('./routes/search');
+var delRouter = require('./routes/del');
 
 var app = express();
 app.use(cors())
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/upload', uploadRouter);
 app.use('/search', searchRouter);
+app.use('/delete', delRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
