@@ -2,7 +2,7 @@ var express = require('express');
 const {search} = require("../functions");
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
     const {field, value, op} = req.body
 
     console.log(field, value, op)
