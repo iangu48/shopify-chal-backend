@@ -2,15 +2,6 @@ const vision = require('@google-cloud/vision');
 const {Firestore} = require('@google-cloud/firestore');
 const firestore = new Firestore();
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDoqLiDu_dT5FIjX--QzlNJXJpwNWEbKLA",
-    authDomain: "shopify-challenge-301321.firebaseapp.com",
-    projectId: "shopify-challenge-301321",
-    storageBucket: "shopify-challenge-301321.appspot.com",
-    messagingSenderId: "805224620641",
-    appId: "1:805224620641:web:41cc10f2fe764659ddc020"
-};
-
 // Creates a client
 const client = new vision.ImageAnnotatorClient();
 
