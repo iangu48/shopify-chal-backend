@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
         res.send(docs)
     })
         .catch(r => {
-            res.send(r)
+            res.send(JSON.stringify(r))
         })
 });
 

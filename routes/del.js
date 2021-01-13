@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
         )
     })
         .catch(r => {
-            res.send(r)
+            res.send(JSON.stringify(r))
         })
 });
 

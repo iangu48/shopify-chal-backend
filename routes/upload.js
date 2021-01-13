@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
             res.send('success');
         }).catch(r => {
             console.log(r)
-            res.send({error: JSON.stringify(r)})
+            res.send(JSON.stringify(r))
         })
 
 
