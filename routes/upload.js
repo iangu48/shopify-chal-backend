@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
             promises.push(upload(url))
         })
         Promise.all(promises).then( value => {
-            res.send('success');
+            res.send(JSON.stringify({success: "URLS uploaded", responses: value}))
         }).catch(r => {
             console.log(r)
             res.send(JSON.stringify(r))
@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
 
 
     } else {
-        res.send('missing urls: []')
+        res.send(JSON.stringify({error: "Missing urls body"}))
     }
 
 });

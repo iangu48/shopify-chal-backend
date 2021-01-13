@@ -6,8 +6,7 @@ router.post('/', function(req, res, next) {
     const {id} = req.body
 
     del(id).then(() => {
-        res.send('success'
-        )
+        res.send(JSON.stringify({success: "deleted"}))
     })
         .catch(r => {
             res.send(JSON.stringify(r))
